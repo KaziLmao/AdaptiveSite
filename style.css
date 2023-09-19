@@ -26,6 +26,11 @@ li, a, button {
 
 a{
 	text-decoration: none;
+    transition: all .2s ease;
+}
+
+a:hover {
+    color: #b03229;
 }
 
 ul{
@@ -34,9 +39,18 @@ ul{
 }
 
 button {
-    padding: 9px;
+    display:inline-block;
+    box-sizing: border-box;
+    padding: 0.9em 1.8em;
+    margin:0 0.3em 0.3em 0;
     border: none;
+    background-color: #DA3A30;
     border-radius: 4px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .15em;
     cursor: pointer;
     transition: all .2s ease;
 }
@@ -51,18 +65,24 @@ button:active {
 
 /* Header */
 header {
-    background-color: rgb(160, 89, 89);
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    font-size: 13px;
+    letter-spacing: 1.5px;
 }
 
 .logo {
-    width: 160px;
+    width: 12.5em;
     cursor: pointer;
-    margin: 13px;
+    margin: 0.8em;
 }
 
 .header-container {
-    width: 1000px;
-    max-height: 100px;
+    max-width: 1200px;
+    max-height: 180px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,7 +94,7 @@ header {
 
 .header-nav-links li {
     display: inline-block;
-    padding: 0 25px;
+    padding: 0 1em;
 }
 
 .header-nav-links li a {
@@ -83,6 +103,19 @@ header {
 
 .header-nav-links li a:hover {
     color: #DA3A30;
+}
+
+#phone {
+    border: 1px solid #FFFFFF;
+    padding: .4em;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+#present {
+    border: 1px solid #DA3A30;
+    padding: .65em;
+    border-radius: 4px;
 }
 
 .header-btn {
@@ -104,14 +137,43 @@ header {
 
 /* Main */
 main {
+    margin-top: 2em;
     background-color: rgb(85, 16, 16);
     display: flex;
     flex-direction: column;
 }
 
+.category-menu{
+    padding: 1em;
+	font-size: 1.1em;
+    text-transform: none;
+}
+
+.category-ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.category-ul li{
+	padding: 10px 16px;
+}
+
+.category-list {
+    color: #b3b3b3;
+}
+
+.selected-category {
+    color: #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+    padding-bottom: .6em;
+}
 
 /* Swiper slides */
 .swiper {
+    z-index: 0;
     width: 100%;
     height: 300px;
     margin: 20px auto;
@@ -129,23 +191,99 @@ main {
 
 /* Footer */
 footer {
-    background-color: rgb(220, 182, 182);
+    /* background-color: rgb(80, 58, 58); */
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
 }
 
-.footer-menu{
-	display: flex;
-	justify-content: space-between;
-	gap: 20px;
-	font-size: 12px;
+.footer-container {
+    width: 1000px;
+    display: flex;
+    margin-bottom: 4em;
 }
 
-.footer-menu li{
-	padding: 6px 0;
+.f1 {
+    border-bottom: 1px solid #626262;
+    margin: 0;
 }
 
-.ulHead{
-	font-size: 14px;
-	font-weight:600;
+.footer-nav {
+    width: 380px;
+    padding: 2em 3em;
+}
+
+.logo-container {
+    width: 280px;
+}
+
+.logo-text {
+    font-size: 13px;
+    text-transform: none;
+    line-height: 24px;
+}
+
+.logo-text p {
+    color: #b3b3b3;
+}
+
+.footer-title {
+    font-weight: 400;
+    font-size: 18px;
+    padding: 5px 0;
+}
+
+.footer-nav-links {
+    text-transform: none;
+    font-size: 13px;
+}
+
+.footer-links-list {
+    padding: 10px 0;
+}
+
+.footer-links-list a {
+    color: #b3b3b3;
+}
+
+.footer-btn {
+    padding: 1.5em;
+}
+
+.footer-bottom {
+    width: 25em;
+    text-align: center;
+    margin-top: 4em;
+    margin-right: 1em;
+    font-size: 0.8em;
+    text-transform: none;
+}
+
+.footer-bottom a {
+    color: #b3b3b3;
+}
+
+.footer-logo {
+    width: 100%;
+}
+
+.footer-logos-container{
+    display: flex;
+    margin: 1em;
+}
+
+.footer-container a {
+    margin-right: 1em;
+}
+
+#youtube {
+    width: 25px;
+    height: 30px;
+}
+
+#vk {
+    width: 25px;
+    height: 25px;
 }
 
 /* Layout */
@@ -166,21 +304,25 @@ footer {
         width: 1000px;
     }
 }
-@media (max-width: 1000px){
+@media (max-width: 1024px){
     .adaptive{
         width: 768px;
+    }
+    .header-nav {
+        display: none;
     }
 }
 @media (max-width: 768px){
     .adaptive{
         width: 480px;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        grid-auto-rows: 100px;
     }
 }
 @media (max-width: 480px){
     .adaptive{
         width: 100%;
+    }
+    button{
+        display:block;
+        margin:0.4em auto;
     }
 }
