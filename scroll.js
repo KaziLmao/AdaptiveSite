@@ -2,9 +2,9 @@ var swiper = new Swiper(".mySwiper", {
   slidesPerView: 3,
   centeredSlides: true,
   spaceBetween: 30,
-  keyboard: {
-    enabled: true,
-  },
+  // keyboard: {
+  //   enabled: true,
+  // },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
