@@ -41,7 +41,7 @@ ul{
 button {
     display:inline-block;
     box-sizing: border-box;
-    padding: 0.9em 1.8em;
+    padding: 1.4em 2.2em;
     margin:0 0.3em 0.3em 0;
     border: none;
     background-color: #DA3A30;
@@ -114,7 +114,7 @@ header {
 
 #present {
     border: 1px solid #DA3A30;
-    padding: .65em;
+    padding: 1.1em;
     border-radius: 4px;
 }
 
@@ -285,6 +285,78 @@ main {
     vertical-align: middle;
 }
 
+/* text under trailer */
+.text-cards {
+    max-width: 780px;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 5em;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-card {
+    border: 1px solid #202020;
+    border-radius: 10px;
+    color: #D6D6D6;
+    padding: 1em 1.8em;
+    height: 80px;
+    text-transform: none;
+    font-size: 1em;
+    font-weight: 400;
+    text-wrap: balance;
+    text-align: center;
+}
+
+/*  */
+.calendar-container {
+    margin: 6em;
+    text-align: center;
+}
+
+.calendar-container h1 {
+    font-weight: 400;
+    letter-spacing: 4px;
+    padding-bottom: .8em;
+}
+
+.calendar-container p {
+    color: #919191;
+    padding-bottom: 3em;
+}
+
+.subscribe-container {
+    margin: 6em;
+    width: 100%;
+    background-color: #141414;
+    display: flex;
+    justify-content: center;
+    padding: 3em;
+}
+
+.subscribe-content {
+    display: flex;
+    width: 1000px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subscribe-content h2 {
+    font-weight: 400;
+    letter-spacing: 4px;
+    padding-bottom: .5em;
+}
+
+.subscribe-content p {
+    color: #919191;
+    text-transform: none;
+}
+
+.subscribe-btn {
+    padding: 1.2em 10em;
+}
+
 /* Swiper slides */
 .swiper {
     z-index: 0;
@@ -313,8 +385,8 @@ main {
 }
 
 .ava {
-    width: 120px;
-    height: 120px;
+    width: 90px;
+    height: 90px;
     overflow: hidden;
     border-radius: 100%;
     margin: -3.75em auto 1.25em;
@@ -353,12 +425,17 @@ main {
     display: none;
 }
 
+.swiper-btn-container {
+    background-color: #7a211a;
+}
+
 .swiper-button-next, .swiper-button-prev {
     color: #FFFFFF;
-    border: 1px solid #d0b4b4;
     border-radius: 50%;
     padding: 2em;
     margin: 0 4em;
+    background-color: #1c1c1ca2;
+    backdrop-filter: blur(5px);
 }
 
 .swiper-pagination-bullets {
@@ -376,7 +453,6 @@ main {
 
 /* Footer */
 footer {
-    /* background-color: rgb(80, 58, 58); */
     font-weight: 300;
     display: flex;
     flex-direction: column;
@@ -489,7 +565,6 @@ footer {
 /* Layout */
 .adaptive{
     height: 100%;
-    margin: auto;
 }
 
 .adaptive > * {
@@ -503,7 +578,9 @@ footer {
     .adaptive{
         width: 1000px;
     }
+    .text-card { max-width: 560px }
 }
+
 @media (max-width: 1024px){
     .adaptive{
         width: 768px;
@@ -511,17 +588,33 @@ footer {
     .header-nav {
         display: none;
     }
+    .text-cards { grid-template-columns: repeat(2, 1fr); }
+    .subscribe-content {flex-direction: column;}
 }
+
 @media (max-width: 768px){
     .adaptive{
         width: 480px;
     }
-    button{
-        display:block;
-        margin:0.4em auto;
-        font-size: .4em;
+    .swiper-slide {
+        max-width: 70%;
+        margin-left: 8.75em;
+        margin-right: 6.25em;
+        justify-content: center;
+        align-items: center;
     }
+    .swiper-button-next, .swiper-button-prev {
+        border-radius: 0;
+        padding: 2em;
+        margin: 0;
+        background-color: rgba(0, 0, 0, 0);
+        backdrop-filter: blur(0);
+    }
+    .text-cards {grid-template-columns: repeat(1, 1fr); }
+    .subscribe-content {text-align: center;}
+    .subscribe-btn {margin-top: 2em;}
 }
+
 @media (max-width: 480px){
     .adaptive{
         width: 100%;
