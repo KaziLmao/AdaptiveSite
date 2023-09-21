@@ -63,6 +63,11 @@ button:active {
     background-color: #7a211a;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Header */
 header {
     background-color: rgba(0, 0, 0, 0.8);
@@ -112,31 +117,26 @@ header {
     font-size: 12px;
 }
 
-#present {
-    border: 1px solid #DA3A30;
-    padding: 1.1em;
-    border-radius: 4px;
-}
-
 .header-btn {
     background-color: #DA3A30;
 }
 
-.login {
+.white-btn {
     background-color: #FFFFFF;
     color: black;
 }
 
-.login:hover {
+.white-btn:hover {
     background-color: #cccccc;
 }
 
-.login:active {
+.white-btn:active {
     background-color: #a7a7a7;
 }
 
 /* Main */
 main {
+    width: 100%;
     margin-top: 2em;
     background-color: rgb(0, 0, 0);
     display: flex;
@@ -144,17 +144,25 @@ main {
 }
 
 .pic {
+    max-width: 100%;
+    height: auto;
+}
+
+.main-picture .main-title{
+    position: absolute;
+    top: 65%;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-size: 2em;
+    background-color: #00000056;
+    backdrop-filter: blur(1px);
+    padding-top: 2em;
     width: 100%;
 }
 
-.main-title {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    font-size: 2em;
+.main-picture {
+    margin-bottom: 8em;
 }
 
 .main-title h1, h2 {
@@ -169,7 +177,7 @@ main {
     align-items: center;
     text-transform: none;
     font-weight: 200;
-    font-size: .9em;
+    font-size: 1.2em;
 }
 
 .main-text h3 {
@@ -239,7 +247,7 @@ main {
     text-transform: uppercase;
 }
 
-.more-course-btn {
+.more-btn {
     background-color: #000000;
     border: 1px solid #DA3A30;
     padding: 15px;
@@ -309,7 +317,7 @@ main {
     text-align: center;
 }
 
-/*  */
+/* Calendar % Subscribe */
 .calendar-container {
     margin: 6em;
     text-align: center;
@@ -355,6 +363,213 @@ main {
 
 .subscribe-btn {
     padding: 1.2em 10em;
+}
+
+/* Access container */
+.access-container {
+    display: flex;
+    margin: 5em 0;
+}
+
+.access-container-title{
+    font-weight: 400;
+    letter-spacing: 4px;
+    padding-top: 2em;
+    font-size: 2.2em;
+}
+
+.access-cards {
+    max-width: 1000px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.access-card {
+    max-width: 350px;
+    max-height: 160px;
+    background-color: #141414;
+    border: 1px solid #1C1C1C;
+    padding: 1.5em;
+    transition: all .1s ease;
+    cursor: default;
+}
+
+.access-card h2 {
+    text-align: start;
+    letter-spacing: 8px;
+    font-weight: 300;
+    font-size: 1.8em;
+}
+
+.access-card p {
+    line-height: 24px;
+    text-transform: none;
+    font-size: .75em;
+}
+
+.access-card:hover {
+    background-color: #000000;
+    border-color: #b03229;
+}
+
+.access-images {
+    position: absolute;
+}
+
+#laptop-img, #phone-img {
+    position: relative;
+}
+
+#laptop-img {
+    top: -10px;
+}
+
+.lap-imgs {
+    position: absolute;
+    width: 380px;
+    height: 239px;
+    left: 505px;
+}
+
+#phone-img {
+    top: 40px;
+    left: -100px;
+}
+
+.ph-imgs{
+    position: absolute;
+    width: 108px;
+    height: 235px;
+    left: 842px;
+    top: 3618px;
+}
+
+/*  */
+.options-container {
+    display: flex;
+    margin: 4em 0;
+}
+
+.options {
+    margin: 2em 4em;
+}
+
+.checklist {
+    margin-top: 3.8em;
+    margin-bottom: 3.8em;
+}
+
+.check {
+    margin: 1em 0;
+    display: flex;
+}
+
+.check-text {
+    font-size: 1.4em;
+    vertical-align: middle;
+    text-transform: none;
+}
+
+.done {
+    width: 30px;
+    height: 30px;
+    font-size: 1.8em;
+    border-radius: 15px;
+    border: 1px solid #b03229;
+    background-color: #b03229;
+}
+
+.options-img{
+    width: 100%;
+    height: auto;
+}
+
+.options-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Subcribe cards */
+.sub-cards-container {
+    margin: 5em 0;
+}
+
+.sub-cards {
+    display: flex;
+    justify-content: center;
+}
+
+.sub-cards-content {
+    padding: 1em;
+}
+
+.sub-option {
+    background-color: #FFFFFF;
+    color: #DA3A30;
+    max-width: 11em;
+    text-align: center;
+    border-radius: 4px;
+    padding: .2em;
+    margin-left: 15em;
+}
+
+.sub-option p{
+    font-size: .8em;
+}
+
+.sub-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #DA3A30;
+    max-width: 26em;
+    height: 28em;
+    padding: 1em;
+}
+
+.sub-card-content h3 {
+    text-align: start;
+    font-weight: 400;
+    padding-bottom: 1em;
+    margin-left: 1.3em;
+}
+
+.sub-card-content span {
+    margin-left: 2em;
+    font-size: 0.8em;
+    text-transform: none;
+}
+
+.sublist {
+    margin-top: .8em;
+    margin-bottom: .8em;
+}
+
+.sub-li {
+    padding: 0 2em;
+    margin: 1em 0;
+    display: flex;
+}
+
+.sub-text {
+    font-size: 0.8em;
+    text-transform: none;
+}
+
+.sub-lite, .sub-lite-btn {
+    background-color: #1C1C1C;
+}
+
+.sub-btn {
+    border: 1px solid #FFFFFF;
+    margin-left: 1em;
+}
+
+.sub-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Swiper slides */
@@ -564,7 +779,9 @@ footer {
 
 /* Layout */
 .adaptive{
-    height: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 .adaptive > * {
@@ -575,27 +792,31 @@ footer {
 }
 
 @media (max-width: 1200px){
-    .adaptive{
+    /* .adaptive{
         width: 1000px;
-    }
+    } */
     .text-card { max-width: 560px }
+    .options-container {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 1024px){
-    .adaptive{
-        width: 768px;
-    }
+    /* .adaptive{
+        width: 1024px;
+    } */
     .header-nav {
         display: none;
     }
     .text-cards { grid-template-columns: repeat(2, 1fr); }
     .subscribe-content {flex-direction: column;}
+    .sub-cards{flex-direction: column;}
 }
 
 @media (max-width: 768px){
-    .adaptive{
-        width: 480px;
-    }
+    /* .adaptive{
+        width: 768px;
+    } */
     .swiper-slide {
         max-width: 70%;
         margin-left: 8.75em;
@@ -616,7 +837,7 @@ footer {
 }
 
 @media (max-width: 480px){
-    .adaptive{
+    /* .adaptive{
         width: 100%;
-    }
+    } */
 }

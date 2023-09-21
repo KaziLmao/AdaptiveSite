@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" >
     <link rel="stylesheet" href="style.css"/>
@@ -17,9 +18,9 @@
                     <ul class="header-nav-links">
                         <li><a id="phone" href="#">+7(705)399-77-57</a></li>
                         <li><a href="#">О платформе</a></li>
-                        <li><a id="present" href="#">Подарочный сертификат</a></li>
+                        <a href="#"><button class="more-btn">Подарочный сертификат</button></a>
                         <a href="" class="header-btn-link"><button class="header-btn">Регистрация</button></a>
-                        <a href="" class="header-btn-link"><button class="header-btn login">Войти</button></a>
+                        <a href="" class="header-btn-link"><button class="header-btn white-btn">Войти</button></a>
                     </ul>
                 </nav>
             </div>
@@ -29,10 +30,10 @@
             <div class="main-content">
                 <div class="main-picture">
                     <img class="pic" src="pics/MainPic.png" alt="main">
-                </div>
-                <div class="main-title">
-                    <h2>онлайн-курсы</h2>
-                    <h1>выдающихся людей</h1>
+                    <div class="main-title">
+                        <h2>онлайн-курсы</h2>
+                        <h1>выдающихся людей</h1>
+                    </div>
                 </div>
                 <div class="main-text">
                     <p>Бесценный опыт и уникальные знания в удобном и увлекательном формате</p>
@@ -76,7 +77,7 @@
                 </div>
             </div>
 
-            <a href="#"><button class="more-course-btn">Показать еще</button></a>
+            <a href="#"><button class="more-btn">Показать еще</button></a>
 
             <div class="trailer-content">
                 <img class="trailer-pic" src="pics/trailer-pic.png" alt="">
@@ -112,6 +113,173 @@
                         <p>Будь в курсе выхода новых материалов и обновлений платформы</p>
                     </div>
                     <a href="#"><button class="subscribe-btn">Подписаться</button></a>
+                </div>
+            </div>
+
+            <h2 class="access-container-title">В доступ входит</h2>
+            <div class="access-container">
+                <div class="access-title">
+                    <!-- <div class="access-images laptop-images">
+                        <img id="laptop-img" src="pics/access/laptop.png" alt="laptop">
+                        <img class="lap-imgs" src="pics/access/videos.png" alt="">
+                        <img class="lap-imgs" src="pics/access/certificate.png" alt="">
+                        <img class="lap-imgs" src="pics/access/workbook.png" alt="">
+                        <img class="lap-imgs" src="pics/access/testings.png" alt="">
+                        <img class="lap-imgs" src="pics/access/community.png" alt="">
+                        <img class="lap-imgs" src="pics/access/mobility.png" alt="">
+                        <img id="phone-img" src="pics/access/phone.png" alt="phone">
+                        <div class="access-images phone-images">
+                            <img class="ph-imgs" src="pics/access/ph-vidoes.png" alt="">
+                            <img class="ph-imgs" src="pics/access/ph-certificate.png" alt="">
+                            <img class="ph-imgs" src="pics/access/ph-workbook.png" alt="">
+                            <img class="ph-imgs" src="pics/access/ph-testings.png" alt="">
+                            <img class="ph-imgs" src="pics/access/ph-community.png" alt="">
+                            <img class="ph-imgs" src="pics/access/ph-mobility.png" alt="">
+                        </div>
+                    </div> -->
+                </div>
+                <div class="access-cards">
+                    <div class="access-card">
+                        <h2>Видеоуроки</h2>
+                        <p>Смотри видеоуроки, разработанные по уникальной методологии с участием Легенд</p>
+                    </div>
+                    <div class="access-card">
+                        <h2>Сертификат</h2>
+                        <p>Получи персональный сертификат о прохождении курса с подписью и печатью</p>
+                    </div>
+                    <div class="access-card">
+                        <h2>Материалы</h2>
+                        <p>Используй дополнительные материалы, предоставленные Легендами индустрии для углубленного изучения темы</p>
+                    </div>
+                    <div class="access-card">
+                        <h2>Тест</h2>
+                        <p>Пройди тест по итогам обучения — проверь, насколько успешно ты усвоил знания</p>
+                    </div>
+                    <div class="access-card">
+                        <h2>Сообщество</h2>
+                        <p>Присоединяйся к комьюнити слушателей курса — расширяй свой круг единомышленников</p>
+                    </div>
+                    <div class="access-card">
+                        <h2>Мобильность</h2>
+                        <p>Подключайся к платформе в любое время, в любом месте, на любом устройстве</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="options-container">
+                <div class="options">
+                    <h1>Подписка «Legends»</h1>
+                    <ul class="checklist">
+                        <li class="check">
+                            <i class="material-icons done">
+                                done
+                            </i>
+                            <span class="check-text">40+ курсов и новинки</span>
+                        </li>
+                        <li class="check">
+                            <i class="material-icons done">
+                                done
+                            </i>
+                            <span class="check-text">лекции с использованием Искусственного интеллекта</span>
+                        </li>
+                        <li class="check">
+                            <i class="material-icons done">
+                                done
+                            </i>
+                            <span class="check-text">регулярное добавление нового контента</span>
+                        </li>
+                        <li class="check">
+                            <i class="material-icons done">
+                                done
+                            </i>
+                            <span class="check-text">опыт, переодеваемый от Легенд различных индустрий</span>
+                        </li>
+                        <li class="check">
+                            <i class="material-icons done">
+                                done
+                            </i>
+                            <span class="check-text">сообщество для вдохновения, знакомств и обмена опытом</span>
+                        </li>
+                    </ul>
+                    <a href="#"><button class="">Узнать больше</button></a>
+                </div>
+                <div class="options-img">
+                    <img src="pics/option-img.png" alt="pic">
+                </div>
+            </div>
+
+            <div class="sub-cards-container">
+                <div class="sub-cards">
+                    <div class="sub-cards-content">
+                        <div class="sub-option">
+                            <p>Спецпредложение</p>
+                        </div>
+                        <div class="sub-card-content sub-lite">
+                            <h3>Подписка legends Lite</h3>
+                            <span>Доступ ко всем имеющимся курсам и новинкам с момента покупки</span>
+                            <ul class="sublist">
+                                <li class="sub-li">
+                                    <span class="sub-text">40+ курсов и новинки</span>
+                                </li>
+                                <li class="sub-li">
+                                    <span class="sub-text">Регулярное обновление контента</span>
+                                </li>
+                                <li class="sub-li">
+                                    <span class="sub-text">Лекции от AI</span>
+                                </li>
+                                <li class="sub-li">
+                                    <span class="sub-text">Сообщество единомышленников</span>
+                                </li>
+                                <li class="sub-li">
+                                    <span class="sub-text">Дополнительные материалы</span>
+                                </li>
+                                <li class="sub-li">
+                                    <span class="sub-text">Сертификаты с подписями и печатями</span>
+                                </li>
+                            </ul>
+                            <div class="sub-btns">
+                                <a href="#"><button class="white-btn">Купить</button></a>
+                                <a href="#"><button class="sub-btn sub-lite-btn">Подарить</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sub-cards-content">
+                        <div class="sub-option">
+                            <p>Чаще всего выбирают</p>
+                        </div>
+                        <div class="sub-card-content">
+                            <h3>Подписка legends pro</h3>
+                            <span>Доступ к образовательным продуктам и новинкам с дополнеными уроками от Легенд</span>
+                            <ul class="sublist">
+                                <li class="sub-li">
+                                    <span class="sub-text">40+ курсов и новинки</span>
+                                </li>
+                                <li class="sub-li">
+                                    <span class="sub-text">Лекции от Легенд с индустрий</span>
+                                </li>
+                                <li class="sub-li">
+                                    <span class="sub-text">Регулярное обновление контента</span>
+                                </li>
+                                <li class="sub-li">
+                                    <span class="sub-text">Лекции от AI</span>
+                                </li>
+                                <li class="sub-li">
+                                    <span class="sub-text">Сообщество единомышленников</span>
+                                </li>
+                                <li class="sub-li">
+                                    <span class="sub-text">Дополнительные материалы</span>
+                                </li>
+                                <li class="sub-li">
+                                    <span class="sub-text">Сертификаты с подписями и печатями</span>
+                                </li>
+                            </ul>
+                            <div class="sub-btns">
+                                <a href="#"><button class="white-btn">Купить</button></a>
+                                <a href="#"><button class="sub-btn">Подарить</button></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
