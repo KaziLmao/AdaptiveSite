@@ -149,15 +149,14 @@ main {
 }
 
 .main-picture .main-title{
-    position: absolute;
-    top: 65%;
+    display: block;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 10px;
     font-size: 2em;
     background-color: #00000056;
     backdrop-filter: blur(1px);
-    padding-top: 2em;
+    padding-top: 1em;
     width: 100%;
 }
 
@@ -219,8 +218,9 @@ main {
 
 /* Courses */
 .course-content {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    /* flex-wrap: wrap; */
+    grid-template-columns: auto auto;
     justify-content: center;
     align-items: center;
     margin-top: 2em;
